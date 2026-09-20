@@ -1,4 +1,4 @@
-# SHOPCO — Oracle Practice Schema
+# SHOPCO - Oracle Practice Schema
 
 SHOPCO is a sample Oracle schema for practicing SQL: joins, aggregations, window functions, hierarchical queries (`CONNECT BY`), and view design. It models a small retail business with stores, products, customers, orders, and staff, using plain relational SQL (no JSON, no PL/SQL blocks required to install).
 
