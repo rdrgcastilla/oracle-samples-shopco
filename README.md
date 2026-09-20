@@ -6,11 +6,11 @@ It follows the same install/create/populate/uninstall pattern used by Oracle's o
 
 ## About SHOPCO
 
-SHOPCO is a fictional mid-sized retailer that sells general merchandise — electronics, home & kitchen goods, sporting goods, books, office supplies, toys, clothing, and beauty products — through a small chain of physical stores plus a single online store. The company runs a lean structure: a CEO at the top, a manager at each store, and a handful of sales associates reporting to them.
+SHOPCO is a fictional mid-sized retailer that sells general merchandise - electronics, home & kitchen goods, sporting goods, books, office supplies, toys, clothing, and beauty products - through a small chain of physical stores plus a single online store. The company runs a lean structure: a CEO at the top, a manager at each store, and a handful of sales associates reporting to them.
 
 Customers can buy from any store or online. Each purchase becomes an order made up of one or more line items, which get shipped from the store that fulfilled them and paid for through one of several payment methods. SHOPCO tracks stock levels per store so it knows when a product needs restocking, works with a set of outside suppliers for its inventory, and collects ratings and written reviews from customers on the products they've bought.
 
-The schema captures that whole flow end to end — from the product catalog and who supplies it, through the sales floor and online storefront, to fulfillment, payment, and customer feedback — which makes it a reasonably realistic playground for practicing everything from a simple `SELECT` to multi-table joins, sales aggregations by store or category, an employee reporting hierarchy, and rating analysis.
+The schema captures that whole flow end to end - from the product catalog and who supplies it, through the sales floor and online storefront, to fulfillment, payment, and customer feedback - which makes it a reasonably realistic playground for practicing everything from a simple `SELECT` to multi-table joins, sales aggregations by store or category, an employee reporting hierarchy, and rating analysis.
 
 ## Entity-relationship diagram
 
@@ -171,18 +171,18 @@ payments             180
 
 ## Schema overview
 
-- **categories** — product categories
-- **suppliers** — companies that supply products
-- **customers** — people placing orders
-- **stores** — physical and online store locations
-- **employees** — staff, including a manager hierarchy (`manager_id`, self-referencing)
-- **products** — items available for purchase
-- **reviews** — customer ratings and comments on products
-- **product_suppliers** — many-to-many link between products and suppliers
-- **orders** / **order_items** — orders and their line items
-- **shipments** — delivery details for orders
-- **inventory** — stock levels per store/product, with reorder thresholds
-- **payments** — payment recorded for each order
+- **categories** - product categories
+- **suppliers** - companies that supply products
+- **customers** - people placing orders
+- **stores** - physical and online store locations
+- **employees** - staff, including a manager hierarchy (`manager_id`, self-referencing)
+- **products** - items available for purchase
+- **reviews** - customer ratings and comments on products
+- **product_suppliers** - many-to-many link between products and suppliers
+- **orders** / **order_items** - orders and their line items
+- **shipments** - delivery details for orders
+- **inventory** - stock levels per store/product, with reorder thresholds
+- **payments** - payment recorded for each order
 
 Included views: `customer_order_summary`, `store_sales_summary` (using `GROUPING SETS`), `product_ratings` (average rating per product), `employee_hierarchy` (using `CONNECT BY`).
 
